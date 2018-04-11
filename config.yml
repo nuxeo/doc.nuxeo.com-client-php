@@ -1,0 +1,12 @@
+default:
+  site:
+    review_period: '13 months'
+    spaces:
+      -
+        space_path: clients/php
+        space_name: Client SDK - PHP
+    dev_browser_path: /
+  verify_paths:
+    - index.html
+development:
+  isDev: true
