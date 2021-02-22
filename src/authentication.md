@@ -3,7 +3,7 @@ title: Authentication
 description: Handle authentication with Nuxeo PHP Client
 review:
     comment: ''
-    date: '2019-06-18'
+    date: '2021-02-22'
     status: ok
 labels:
     - php-client
@@ -16,7 +16,7 @@ Nuxeo PHP Client handles these authentication methods:
 - basic authentication via `BasicAuthentication`
 - portal SSO authentication via `PortalSSOAuthentication`
 - token authentication via `TokenAuthentication`
-- OAuth2 authentication via `OAuth2Authentication`
+- OAuth 2 authentication via `OAuth2Authentication`
 
 ## Basic Authentication
 
@@ -57,11 +57,12 @@ use Nuxeo\Client\Auth\TokenAuthentication;
 
 (new NuxeoClient())->withAuthentication(new TokenAuthentication("nuxeoToken"));
 ```
+
 Token acquisition is not implemented in PHP client and should be done by following this [documentation](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/login/nuxeo-platform-login-token#implementation).
 
-## OAuth2 Authentication
+## OAuth 2 Authentication
 
-Oauth2 authentication is enabled by default on Nuxeo server but Nuxeo PHP client do not implement the login flow. You need to implement it on your own and use the access token with Nuxeo PHP client:
+Oauth 2 authentication is enabled by default on Nuxeo server but Nuxeo PHP client do not implement the login flow. You need to implement it on your own and use the access token with Nuxeo PHP client:
 
 You can find a sample of login flow for a Symfon 4 application and the `league/oauth2-client` library under [integration/oauth2](https://github.com/nuxeo/nuxeo-php-client/tree/main/integration/oauth2)
 
@@ -87,11 +88,11 @@ use Nuxeo\Client\Spi\Auth\AuthenticationInterceptor;
 
 public class MyAuthInterceptor implements AuthenticationInterceptor {
     protected $token;
-    
+
     public function __construct($token) {
       $this->token = $token;
     }
-    
+
     public function proceed(Client $client, Request $request) {
         return $request->withHeader("MY-HEADER", $this->token);
     }

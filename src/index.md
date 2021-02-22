@@ -3,12 +3,11 @@ title: PHP Client SDK
 description: Nuxeo Client SDK - PHP
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2021-02-22'
     status: ok
 labels:
     - php-client
 is_overview: true
-
 ---
 
 The Nuxeo PHP Client is a PHP library for Nuxeo REST API.
@@ -19,7 +18,7 @@ It is compatible with all Nuxeo versions as of LTS 2015.
 
 Follow this [tutorial]({{page space='nxdoc' page='setting-up-your-nuxeo-environment'}}) to have a running Nuxeo instance on your local machine.
 
-### Library import
+### Library Import
 
 Download the latest build [Nuxeo PHP Client main](https://github.com/nuxeo/nuxeo-php-client/archive/main.zip).
 
@@ -33,7 +32,7 @@ Composer:
   }
 ```
 
-### Creating a Client
+### Create a Client
 
 ```php
 use Nuxeo\Client\NuxeoClient;

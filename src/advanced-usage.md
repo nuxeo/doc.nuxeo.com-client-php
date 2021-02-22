@@ -3,7 +3,7 @@ title: Advanced Usage
 description: How to extend Nuxeo PHP Client
 review:
     comment: ''
-    date: '2019-06-18'
+    date: '2021-02-22'
     status: ok
 labels:
     - php-client

@@ -3,14 +3,13 @@ title: User & Group
 description: Handle users & groups
 review:
     comment: ''
-    date: '2019-06-18'
+    date: '2021-02-22'
     status: ok
 labels:
     - php-client
 tree_item_index: 500
 section_parent: php
 toc: true
-
 ---
 
 This section is about handling users and groups within Nuxeo PHP Client.
@@ -23,8 +22,8 @@ $userManager = $client->userManager();
 ## Create
 
 APIs below are available to create user/group:
-- createUser which takes a user
-- createGroup which takes a group
+- `createUser` which takes a user
+- `createGroup` which takes a group
 
 Let's first create a user:
 ```php
@@ -48,7 +47,7 @@ use Nuxeo\Client\Objects\User\Group;
 $group = (new Group())
   ->setGroupName('myGroup')
   ->setGroupLabel('My Group');
-      
+
 Group group = new Group();
 group.setGroupName("myGroup");
 group.setGroupLabel("My Group");

@@ -3,14 +3,13 @@ title: Concepts & Configuration
 description: Configure the Nuxeo PHP Client
 review:
     comment: ''
-    date: '2019-06-18'
+    date: '2021-02-22'
     status: ok
 labels:
     - php-client
 tree_item_index: 200
 section_parent: php
 toc: true
-
 ---
 
 ## Concepts
@@ -125,7 +124,7 @@ $client
     ->schemas("dublincore")
     ->enrichers("thumbnail");
 
-/** @var Repository $repository */ 
+/** @var Repository $repository */
 $repository = $client->repository()
     ->schemas('*') // fetch all properties instead of dublincore
     ->enrichers('document', 'acls', true); // enrich Entity with its ACLs in addition to its Thumbnail
