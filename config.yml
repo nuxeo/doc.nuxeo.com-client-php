@@ -4,8 +4,13 @@ default:
     spaces:
       -
         space_path: clients/php
-        space_name: Client SDK - PHP
+        space_name: PHP Client SDK
     dev_browser_path: /
+    versions:
+      - label: Next Java
+        is_current_version: true
+      - label: PHP 2.1
+        url_path: '2.1'
   verify_paths:
     - index.html
 development:
