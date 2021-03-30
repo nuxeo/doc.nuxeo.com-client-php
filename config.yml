@@ -2,16 +2,9 @@ default:
   site:
     review_period: '13 months'
     spaces:
-      -
-        space_path: clients/php
+      - space_path: client-php
         space_name: PHP Client SDK
-    dev_browser_path: /
-    versions:
-      - label: Next Java
-        is_current_version: true
-      - label: PHP 2.1
-        url_path: '2.1'
-  verify_paths:
-    - index.html
+    branch: 'main'
+    dev_browser_path: client-php
 development:
   isDev: true
